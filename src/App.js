@@ -1,7 +1,8 @@
 
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+// import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Contador from './components/Contador/Contador';
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
     
     <div>   
         <NavBar/>  
-        <ItemListContainer saludo ="Buenas Noches Eric, perdon por la hora que lo envio!!"/>  
+        <Contador/>
               
     </div>
   );
