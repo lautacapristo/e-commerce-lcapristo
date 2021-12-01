@@ -1,4 +1,7 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import CartWidget from '../CartWidget/CartWidget';
+//deberia hacer 1 por una para que sea menos pesado
+//por ejemplo, import Navbar from 'react-bootstrap/NavBar'
 
 function NavBar() {
     return (
@@ -20,9 +23,9 @@ function NavBar() {
       </NavDropdown>
     </Nav>
     <Nav>
-      
+    
       <Nav.Link eventKey={2} href="#memes">
-        Registrarse
+        <CartWidget />
       </Nav.Link>
     </Nav>
   </Navbar.Collapse>
