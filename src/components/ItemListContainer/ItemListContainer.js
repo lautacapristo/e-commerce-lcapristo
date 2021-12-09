@@ -1,6 +1,12 @@
 import React from 'react'
 import { task } from '../../ayuda/task'
 import { useState, useEffect } from 'react'
+import ItemList from '../ItemList/ItemList'
+
+
+
+
+
 
 // const task = new Promise((res, rej) => {
 
@@ -12,24 +18,31 @@ import { useState, useEffect } from 'react'
 
 const ItemListContainer = () => {
     
-    const [bool, setBool ] = useState(true)
-   const [producto, setProducto ] = useState([])
+      const [bool, setBool] = useState()
+   const [productos, setProductos ] = useState([])
+   
 
 useEffect(()=> {
     task 
-    .then(res => setProducto(res))
+    .then(res => setProductos(res))
+    .catch(err => console.log(err))
+   
 }, [])
 
-   function handler() {
-       setBool(!bool)
-}
-task 
-.then(res => setProducto(res))
-console.log(producto);
+      function handler() {
+          setBool(!bool)
+  }
+ 
+(console.log(productos))
+
  return (
         <div>
-            <h4> sd </h4>
-        <button onClick={handler}>clickito.  </button>
+
+            <ItemList productos = { productos } /> 
+            <button onClick={handler}> no lo puedo borrar </button>
+           
+            
+          
         </div>
     )
 }
