@@ -6,7 +6,7 @@ function Item({prod}) {
         <div key ={prod.id} className='col-lg-3'>
             
         <Card style={{ width: '18rem' }}>
-   <Card.Img variant="top" src="holder.js/100px180" />
+   <Card.Img variant="top" src= {`${prod.foto}`} />
    <Card.Body>
    <Card.Title>{`${prod.name}`} </Card.Title>
    <Card.Text>
