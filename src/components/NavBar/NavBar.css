@@ -18,10 +18,14 @@
 .letraNav {
     margin-left: 0.1em;
     font-family: 'Pangolin', cursive;
+    text-decoration: none;
+    color: white;
+    padding: 0.7em;
 }
 
 .letraNav:hover {
     font-weight: bold;
+    color: grey;
 }
 
 .marginh2 {

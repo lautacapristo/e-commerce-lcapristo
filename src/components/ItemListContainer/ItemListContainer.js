@@ -3,15 +3,15 @@ import { task } from '../../ayuda/task'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css';
-// import { useParams  } from 'react-router-dom'
+ import { useParams  } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
     
     //   const [bool, setBool] = useState()
    const [productos, setProductos ] = useState([])
-
-//    const {} = useParams
+ 
+   const {idCate} = useParams()
    
 
 useEffect(()=> {
@@ -25,7 +25,7 @@ return (
     <div className="row back">
 
         <ItemList productos = { productos } /> 
-        {/* <button onClick={handler}> no lo puedo borrar </button>
+        {/* <button onClick={handler}> </button>
         */}
         
       

@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 
 function ItemDetailContainer() {
-const [promise, setPromise] = useState([]);
+const [promise, setPromise] = useState({});
 
     useEffect(()=> {
         promiseDetail 
-        .then(res => setPromise(res.find((producto) => producto.name === "gorra")))
+        .then(res => setPromise(res.find((producto) => producto.name === "remera")))
         .catch(err => console.log(err))
        
        

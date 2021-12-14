@@ -1,5 +1,5 @@
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import { Link } from 'react-router-dom'
+ import { BrowserRouter, Routes, Route } from 'react-router-dom';
+ // import { Link } from 'react-router-dom'
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 // import Contador from './components/Contador/Contador';
@@ -9,22 +9,40 @@ function App() {
 
   
   return (
-    // <BrowserRouter>
+     <BrowserRouter>
     <div>   
         <NavBar/>  
-        {/* <Routes>
+         <Routes>
         {/* <Contador/> */}
-        {/* <Route 
+        <Route 
           exact
-            path="/categoria" element = {<ItemListContainer/> }
-            /> */} 
-
-
-         <ItemListContainer/> 
-       <ItemDetailContainer/>    
-        {/* </Routes>  */}
+            path="/" element = {<ItemListContainer/> }
+            />  
+        <Route 
+          exact
+            path="/categoria/:idCate" element = {<ItemListContainer/> }
+            />  
+            <Route 
+          exact
+            path="/remeras" element = {<ItemListContainer/> }
+            />  
+            <Route 
+          exact
+            path="/gorras" element = {<ItemListContainer/> }
+            />  
+            <Route 
+          exact
+            path="/lentes" element = {<ItemListContainer/> }
+            />  
+            <Route 
+          exact
+            path="/detalle" element = {<ItemDetailContainer/> }
+            />  
+         {/* <ItemListContainer/>  */}
+       {/* <ItemDetailContainer/>     */}
+         </Routes>  
     </div>
-    // {/* </BrowserRouter> */}
+      </BrowserRouter> 
   );
 }
 

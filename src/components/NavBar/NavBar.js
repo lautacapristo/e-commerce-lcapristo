@@ -1,6 +1,7 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
+import { Link } from 'react-router-dom'
 
 //deberia hacer 1 por una para que sea menos pesado
 //por ejemplo, import Navbar from 'react-bootstrap/NavBar'
@@ -16,10 +17,11 @@ function NavBar() {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto navCentro">
-      <Nav.Link href="#features" className="letraNav">Remeras</Nav.Link>
-      <Nav.Link href="#pricing" className="letraNav">Pantalones</Nav.Link>
-      <Nav.Link href="#pricing" className="letraNav">Gorras</Nav.Link>
-      <Nav.Link href="#pricing" className="letraNav">Lentes </Nav.Link>
+      <Link className="letraNav" to="/categoria/remeras" >Remeras</Link>
+      <Link className="letraNav" to="/categoria/pantalones" >Pantalones</Link>
+      <Link className="letraNav" to="/categoria/gorras" >Gorras</Link>
+      <Link className="letraNav" to="/categoria/lentes" >Lentes</Link>
+    
     </Nav>
     <Nav>
     
