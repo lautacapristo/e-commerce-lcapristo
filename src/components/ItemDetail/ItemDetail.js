@@ -4,10 +4,11 @@ import React from 'react'
 
 function ItemDetail({promise}) {
     return (
-        <>
-            { promise  }   
+        <div>
+           
+             {promise}
             
-        </>
+        </div>
     )
 }
 

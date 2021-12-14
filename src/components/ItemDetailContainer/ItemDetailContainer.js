@@ -8,14 +8,14 @@ const [promise, setPromise] = useState([]);
 
     useEffect(()=> {
         promiseDetail 
-        .then(res => setPromise(res.find((producto) => producto.id === 1)))
+        .then(res => setPromise(res.find((producto) => producto.name === "gorra")))
         .catch(err => console.log(err))
        
        
     }, [])
     console.log(promise)
     return (
-        <div>
+        <div key= {promise.name}>
             <ItemDetail promise= {promise} />
         </div>
     )
