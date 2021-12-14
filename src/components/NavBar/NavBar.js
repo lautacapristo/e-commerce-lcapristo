@@ -18,8 +18,8 @@ function NavBar() {
     <Nav className="me-auto navCentro">
       <Nav.Link href="#features" className="letraNav">Remeras</Nav.Link>
       <Nav.Link href="#pricing" className="letraNav">Pantalones</Nav.Link>
-      <Nav.Link href="#pricing" className="letraNav">Accesorios</Nav.Link>
-      <Nav.Link href="#pricing" className="letraNav">Promociones </Nav.Link>
+      <Nav.Link href="#pricing" className="letraNav">Gorras</Nav.Link>
+      <Nav.Link href="#pricing" className="letraNav">Lentes </Nav.Link>
     </Nav>
     <Nav>
     
@@ -33,11 +33,11 @@ function NavBar() {
   </Navbar>
   <h2 className="col-lg-12 text-center marginh2">TIENDA ONLINE </h2>
  
- <div>
+ {/* <div>
    <p className="imagenFondo row"> 
     <em className="col-lg-6 ladoIzq"> Lado izquierdo </em>
      <em className="col-lg-6 ladoDer"> Lado derecho </em>  </p>
-   </div>
+   </div> */}
         </div>
         
     )

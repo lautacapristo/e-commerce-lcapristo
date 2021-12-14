@@ -1,12 +1,13 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
+import './Item.css'
 
 function Item({prod}) {
     return (
-        <div key ={prod.id} className='col-lg-3'>
+        <div key ={prod.id}>
             
-        <Card style={{ width: '18rem' }}>
-   <Card.Img variant="top" src= {`${prod.foto}`} />
+        <Card className="cardStyle">
+   <Card.Img variant="top" src= {`${prod.foto}`} className="cardFoto" />
    <Card.Body>
    <Card.Title>{`${prod.name}`} </Card.Title>
    <Card.Text>

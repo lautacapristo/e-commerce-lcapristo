@@ -2,24 +2,16 @@ import React from 'react'
 import { task } from '../../ayuda/task'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
-
-
-
-
-
-
-// const task = new Promise((res, rej) => {
-
-// res('200 ok')
-
-// })
-
+import './ItemListContainer.css';
+// import { useParams  } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
     
-      const [bool, setBool] = useState()
+    //   const [bool, setBool] = useState()
    const [productos, setProductos ] = useState([])
+
+//    const {} = useParams
    
 
 useEffect(()=> {
@@ -29,23 +21,24 @@ useEffect(()=> {
    
 }, [])
 
-      function handler() {
-          setBool(!bool)
-  }
- 
-(console.log(productos))
+return (
+    <div className="row back">
 
- return (
-        <div>
-
-            <ItemList productos = { productos } /> 
-            <button onClick={handler}> no lo puedo borrar </button>
-           
-            
-          
-        </div>
-    )
+        <ItemList productos = { productos } /> 
+        {/* <button onClick={handler}> no lo puedo borrar </button>
+        */}
+        
+      
+    </div>
+)
 }
+
+//       function handler() {
+//           setBool(!bool)
+//   }
+ 
+
+
 
     // task
     // .then(dataRes => {

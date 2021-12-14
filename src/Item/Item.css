@@ -1,0 +1,14 @@
+.cardStyle {
+    height: 28em;
+   width: 20.2em;
+    margin-top: 2.7em;
+    margin-left: 1.7em;
+    border-width:3px !important;
+    border-color:black !important; 
+   border-style:solid !important;
+}
+
+.cardFoto {
+    margin-left: 2.3em;
+    max-width: 15.2em;
+}
