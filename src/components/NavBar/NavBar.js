@@ -13,14 +13,14 @@ function NavBar() {
   <Container>
 
 
-  <Navbar.Brand href="#home" className="quc">Quilmes Urban Clothes</Navbar.Brand>
+  <Link to="/" className="quc">Quilmes Urban Clothes</Link>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto navCentro">
-      <Link className="letraNav" to="/categoria/remeras" >Remeras</Link>
-      <Link className="letraNav" to="/categoria/pantalones" >Pantalones</Link>
-      <Link className="letraNav" to="/categoria/gorras" >Gorras</Link>
-      <Link className="letraNav" to="/categoria/lentes" >Lentes</Link>
+      <Link className="letraNav" to="/remeras" >Remeras</Link>
+      <Link className="letraNav" to="/pantalones" >Pantalones</Link>
+      <Link className="letraNav" to="/gorras" >Gorras</Link>
+      <Link className="letraNav" to="/cintos" >Cintos</Link>
     
     </Nav>
     <Nav>

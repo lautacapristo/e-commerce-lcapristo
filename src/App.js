@@ -20,9 +20,9 @@ function App() {
             />  
         <Route 
           exact
-            path="/categoria/:idCate" element = {<ItemListContainer/> }
+            path="/:idCate" element = {<ItemListContainer/> }
             />  
-            <Route 
+            {/* <Route 
           exact
             path="/remeras" element = {<ItemListContainer/> }
             />  
@@ -33,10 +33,10 @@ function App() {
             <Route 
           exact
             path="/lentes" element = {<ItemListContainer/> }
-            />  
+            />   */}
             <Route 
           exact
-            path="/detalle" element = {<ItemDetailContainer/> }
+            path="/detalle/:ids" element = {<ItemDetailContainer/> }
             />  
          {/* <ItemListContainer/>  */}
        {/* <ItemDetailContainer/>     */}

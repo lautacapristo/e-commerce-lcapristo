@@ -13,6 +13,14 @@
 
 .quc {
     font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+
+}
+
+.quc:hover {
+    color: grey;
 }
 
 .letraNav {

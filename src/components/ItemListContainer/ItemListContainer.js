@@ -3,24 +3,35 @@ import { task } from '../../ayuda/task'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css';
- import { useParams  } from 'react-router-dom'
+ import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
     
     //   const [bool, setBool] = useState()
    const [productos, setProductos ] = useState([])
- 
+ console.log(productos)
    const {idCate} = useParams()
    
 
 useEffect(()=> {
+if(idCate) {
+    task 
+    .then(res => setProductos(res.filter(prod => prod.categoria === idCate)))
+    .catch(err => console.log(err))
+   
+} else {
     task 
     .then(res => setProductos(res))
     .catch(err => console.log(err))
    
-}, [])
+}
 
+
+    
+}, [idCate])
+
+// console.log(productos);
 return (
     <div className="row back">
 
