@@ -10,7 +10,7 @@ const ItemListContainer = () => {
     
     //   const [bool, setBool] = useState()
    const [productos, setProductos ] = useState([])
- console.log(productos)
+ 
    const {idCate} = useParams()
    
 

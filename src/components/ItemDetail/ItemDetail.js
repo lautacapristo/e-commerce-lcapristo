@@ -1,10 +1,25 @@
 import React from 'react'
-import { Card, Button, ListGroup } from 'react-bootstrap'
+import { Card, ListGroup, Button } from 'react-bootstrap'
 import './ItemDetail.css'
+import Contador from '../Contador/Contador'
+import {useState, useContext} from 'react'
+import { Link } from 'react-router-dom'
+import { CartContext } from '../../Context/CartContext'
 
 function ItemDetail({productos}) {
 
-console.log(productos);
+const [carta, setCarta] = useState(true)
+
+const {cartList, agregarAlCarrito} = useContext(CartContext)
+
+const onAdd = (qualityToAdd) => {
+
+setCarta(false);
+console.log(qualityToAdd)
+agregarAlCarrito({...productos, cantidad:qualityToAdd})
+} 
+
+console.log(cartList)
 
     return (
                  <div key ={productos.id} >
@@ -19,10 +34,11 @@ console.log(productos);
   <ListGroup.Item>{productos.caracteristica}</ListGroup.Item>
   <ListGroup.Item>{productos.price}</ListGroup.Item>
   <ListGroup.Item> {productos.marca} </ListGroup.Item>
+  {carta ? <Contador stock = {productos.stock} onAdd = {onAdd} /> : <Button variant="danger" size="lg" className="w-100"><Link to="/cart">Ir al carro </Link></Button> }
   
 </ListGroup>
             </Card.Text>
-            <Button variant="danger" size="lg" className="w-100"> Agregar al carrito </Button>
+            
             </Card.Body>
             </Card>
      

@@ -17,7 +17,6 @@ function ItemDetailContainer() {
         
     }, [ids])
     
-    console.log(productos)
       
     
     return (

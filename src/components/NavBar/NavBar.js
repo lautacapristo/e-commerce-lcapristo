@@ -21,6 +21,7 @@ function NavBar() {
       <Link className="letraNav" to="/pantalones" >Pantalones</Link>
       <Link className="letraNav" to="/gorras" >Gorras</Link>
       <Link className="letraNav" to="/cintos" >Cintos</Link>
+      
     
     </Nav>
     <Nav>

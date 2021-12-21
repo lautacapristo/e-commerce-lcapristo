@@ -5,10 +5,13 @@ import NavBar from './components/NavBar/NavBar';
 // import Contador from './components/Contador/Contador';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
  import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+ import Cart from './components/Cart/Cart';
+ import CartContextProvider from './Context/CartContext'
 function App() {
 
   
   return (
+    <CartContextProvider>
      <BrowserRouter>
     <div>   
         <NavBar/>  
@@ -21,7 +24,12 @@ function App() {
         <Route 
           exact
             path="/:idCate" element = {<ItemListContainer/> }
-            />  
+            /> 
+            <Route 
+          exact
+            path="/cart" element = {<Cart/> }
+            />   
+            
             {/* <Route 
           exact
             path="/remeras" element = {<ItemListContainer/> }
@@ -34,15 +42,18 @@ function App() {
           exact
             path="/lentes" element = {<ItemListContainer/> }
             />   */}
+           
             <Route 
           exact
             path="/detalle/:ids" element = {<ItemDetailContainer/> }
             />  
+            
          {/* <ItemListContainer/>  */}
        {/* <ItemDetailContainer/>     */}
          </Routes>  
     </div>
       </BrowserRouter> 
+      </CartContextProvider>
   );
 }
 
