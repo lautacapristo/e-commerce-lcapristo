@@ -12,11 +12,11 @@ const [carta, setCarta] = useState(true)
 
 const {cartList, agregarAlCarrito} = useContext(CartContext)
 
-const onAdd = (qualityToAdd) => {
+const onAdd = (cantidad) => {
 
 setCarta(false);
-console.log(qualityToAdd)
-agregarAlCarrito({...productos, cantidad:qualityToAdd})
+console.log(cantidad)
+agregarAlCarrito({...productos, cantidad:cantidad})
 } 
 
 console.log(cartList)
