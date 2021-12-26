@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import { getFirestoneApp } from './config/getFirestoneApp';
+import { getFirestoreApp } from './config/getFirestoreApp';
 
-getFirestoneApp()
+getFirestoreApp()
 
 
 ReactDOM.render(

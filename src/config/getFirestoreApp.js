@@ -16,6 +16,6 @@ const firebaseConfig = {
 // Initialize Firebase
  const app = initializeApp(firebaseConfig);
 
- export const getFirestoneApp = () => {
+ export const getFirestoreApp = () => {
      return app
  }

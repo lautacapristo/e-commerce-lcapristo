@@ -15,7 +15,7 @@ const ItemList = memo(
        
            ) 
     }
-, (old, rew) => old.productos.length === rew.productos.length)
+)
 
 // function ItemList({productos}) {
 //     return (

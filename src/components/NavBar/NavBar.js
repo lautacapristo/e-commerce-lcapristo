@@ -26,7 +26,7 @@ function NavBar() {
     </Nav>
     <Nav>
     
-      <Nav.Link eventKey={2} href="#memes">
+      <Nav.Link >
         <CartWidget className="carrito" />
       </Nav.Link>
     </Nav>
