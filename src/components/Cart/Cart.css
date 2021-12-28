@@ -3,10 +3,25 @@
     margin-top: 1em;
 }
 
-.marginCarts {
-    margin: 2.4em;
+.padreTr {
+    display: flex;
+    flex-direction: row;
+}
+
+ .marginCarts {
+   
+    text-align: center;
 }
 
 .marginTh {
-    margin: 2.4em;
+   
+    text-align: center;
+} 
+
+.linkQuc {
+    text-decoration: none;
+    color: white
+}
+.linkQuc:hover {
+    color:rgb(204, 200, 195)
 }
