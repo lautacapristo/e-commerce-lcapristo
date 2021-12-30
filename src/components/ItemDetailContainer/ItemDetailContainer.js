@@ -1,27 +1,33 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState} from 'react'
-import { task } from '../../ayuda/task'
+// import { task } from '../../ayuda/task'
 import ItemDetail from '../ItemDetail/ItemDetail'
+ import {  getFirestore, doc, getDoc } from 'firebase/firestore'
 
 function ItemDetailContainer() {
     
-    const [productos, setProductos ] = useState({})
+    const [producto, setProducto ] = useState({})
     
     const {ids} = useParams()
     
     useEffect(() => {
-        task 
-        .then(res => setProductos(res.find(prod => prod.id === parseInt(ids))))
-        .catch(err => console.log(err))
+        const db = getFirestore()
+        
+ const objetoDb = doc(db, 'items', ids)
+ getDoc(objetoDb) 
+ .then(res => setProducto({ id: res.id, ...res.data() }))
+ .catch(err => console.log(err))
+        // task 
+        // .then(res => setProductos(res.find(prod => prod.id === parseInt(ids))))
+        // .catch(err => console.log(err))
         
     }, [ids])
     
-      
     
     return (
         <div> 
-            <ItemDetail productos = {productos}></ItemDetail>
+            <ItemDetail productos = {producto}></ItemDetail>
         </div>
     )
 }
