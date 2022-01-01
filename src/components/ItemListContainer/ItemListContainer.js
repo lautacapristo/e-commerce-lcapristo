@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css';
  import { useParams } from 'react-router-dom'
+ import SubTitulo from '../SubTitulo/SubTitulo'
 
 
  import { collection, getFirestore, getDocs, where, query } from 'firebase/firestore'
@@ -56,6 +57,7 @@ import './ItemListContainer.css';
 return (
     <div className="row back">
 
+        <SubTitulo />
         <ItemList productos = { productos } /> 
         {/* <button onClick={handler}> </button>
         */}

@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom'
 
 function NavBar() {
     return (
-        <div>
-         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"className='py-3'>   
+        <div className="fix">
+         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"className='py-3 '>   
   <Container>
 
 
@@ -17,6 +17,7 @@ function NavBar() {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto navCentro">
+      <Link className="letraNav" to="/" >General</Link>
       <Link className="letraNav" to="/remeras" >Remeras</Link>
       <Link className="letraNav" to="/pantalones" >Pantalones</Link>
       <Link className="letraNav" to="/gorras" >Gorras</Link>
@@ -34,7 +35,7 @@ function NavBar() {
     
   </Container>
   </Navbar>
-  <h2 className="col-lg-12 text-center marginh2">TIENDA ONLINE </h2>
+  {/* <h2 className="col-lg-12 text-center marginh2" >TIENDA ONLINE </h2> */}
  
  {/* <div>
    <p className="imagenFondo row"> 

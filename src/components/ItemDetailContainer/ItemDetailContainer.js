@@ -4,6 +4,8 @@ import { useEffect, useState} from 'react'
 // import { task } from '../../ayuda/task'
 import ItemDetail from '../ItemDetail/ItemDetail'
  import {  getFirestore, doc, getDoc } from 'firebase/firestore'
+ import SubTitulo from '../SubTitulo/SubTitulo'
+ import './ItemDetailContainer.css';
 
 function ItemDetailContainer() {
     
@@ -26,7 +28,8 @@ function ItemDetailContainer() {
     
     
     return (
-        <div> 
+        <div className="row back"> 
+            <SubTitulo />
             <ItemDetail productos = {producto}></ItemDetail>
         </div>
     )

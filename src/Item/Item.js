@@ -7,16 +7,16 @@ function Item({prod}) {
     return (
         <div key ={prod.id}>
             
-        <Card className="cardStyle">
+        <Card className="cardStyle cartas">
    <Card.Img variant="top" src= {`${prod.foto}`} className="cardFoto" />
-   <Card.Body>
-   <Card.Title  className="text-center">{`${prod.name}`} </Card.Title>
-   <Card.Text className="text-center">
+   <Card.Body class="card-body">
+   <Card.Title  className="text-center c--white borderCard">{`${prod.name}`} </Card.Title>
+   <Card.Text className="text-center c--white">
    {`${prod.price}`}
    </Card.Text>
  <Link to= {`/detalle/${prod.id}`}  >
- <Button variant="danger" size="lg" className="w-100">
-    Ver detalle
+ <Button  size="lg" className="w-100 backButton">
+   <em> Ver detalle</em>
   </Button>
  </Link>
    </Card.Body>

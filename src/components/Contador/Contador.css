@@ -1,0 +1,22 @@
+.buttonContador {
+    background-color: rgb(65, 63, 66);
+}
+
+.bordeCount {
+    border-bottom: 3px solid white;
+}
+
+.bg-oscuro {
+    background-color: black;
+    
+}
+.bg-oscuro:hover {
+    background-color: rgb(53, 52, 52);
+}
+
+.c-white {
+    color: white;
+}
+
+
+

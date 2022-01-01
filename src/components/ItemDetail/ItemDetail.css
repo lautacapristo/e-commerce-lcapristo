@@ -1,14 +1,39 @@
 .detail {
     height: 80%;
-   width: 26.2em;
+   padding: 7em;
     margin-top: 2.7em;
     margin-left: 1.7em;
-    border-width:3px !important;
-    border-color:black !important; 
-   border-style:solid !important;
+   width: 35em !important;
+   background: rgb(214, 207, 207);
+   background: linear-gradient(176deg, rgb(212, 204, 204) 3%, rgb(188, 188, 189) 90%);
+   align-items: center;
+   border: 1px solid rgb(214, 207, 207)!important;
 }
 
 .fotoDetail {
    
     max-width: 25.2em;
 }
+
+.talle {
+    line-height: 2.3em;
+}
+
+.bordes {
+   border-bottom: 2px groove white; 
+}
+
+
+.bg-oscuro {
+    background-color: black !important;
+    
+}
+.bg-oscuro:hover {
+    background-color: rgb(53, 52, 52) !important;
+}
+
+.c-white {
+    color: white !important;
+    text-decoration: none;
+}
+
