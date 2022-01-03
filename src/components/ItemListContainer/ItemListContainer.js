@@ -2,6 +2,7 @@ import React from 'react'
 // import { task } from '../../ayuda/task'
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
+import Footer from '../Footer/Footer'
 import './ItemListContainer.css';
  import { useParams } from 'react-router-dom'
  import SubTitulo from '../SubTitulo/SubTitulo'
@@ -19,18 +20,6 @@ import './ItemListContainer.css';
 //  const [producto, setProducto] = useState([])
    const {idCate} = useParams()
    
-
-//  useEffect(()=> {
-//  if(idCate) {
-//      task 
-//      .then(res => setProductos(res.filter(prod => prod.categoria === idCate)))
-//      .catch(err => console.log(err)) 
-//  } else {
-//      task 
-//      .then(res => setProductos(res))
-//      .catch(err => console.log(err)) 
-//  }  
-//  }, [idCate])
 
 
      useEffect(()=> {
@@ -62,7 +51,7 @@ return (
         {/* <button onClick={handler}> </button>
         */}
         
-      
+      <Footer />
     </div>
 )
 } 

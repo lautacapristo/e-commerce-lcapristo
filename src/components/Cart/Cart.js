@@ -3,7 +3,9 @@ import { useContext } from 'react'
 import { CartContext } from '../../Context/CartContext'
 import { Card, Button } from 'react-bootstrap'
 import './Cart.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import SubTitulo from '../SubTitulo/SubTitulo';
+import Footer from '../Footer/Footer'
 
 function Cart() {
  
@@ -16,7 +18,7 @@ if (sumaTotal() === 0) {
     return (
         
         <div>
-
+<SubTitulo />
 <table class=" table container">
 <thead>
                 <tr >
@@ -56,6 +58,7 @@ if (sumaTotal() === 0) {
             
              <p class="text-center"> TOTAL A PAGAR: ${sumaTotal()}  </p>
              <Button onClick={() => borrarCarro(cartList)}> Vaciar carro </Button>
+             <Footer />
         </div>
 
     )

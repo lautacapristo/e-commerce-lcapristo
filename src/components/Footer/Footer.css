@@ -1,0 +1,31 @@
+.icons {
+    width: 1.9em;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-grey {
+    background-color: rgb(46, 46, 46);
+}
+
+.c-white {
+    color: white;
+}
+
+
+.mediosDePago {
+    width: 3.2em !important;
+    height: 1.7em !important;
+}
+
+.derRev {
+    padding: 5.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-left: 1.7em !important;
+    
+}
+
+.contactoFooter {
+    border-bottom: 1px dashed white;
+}

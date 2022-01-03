@@ -5,6 +5,7 @@ import Contador from '../Contador/Contador'
 import {useState, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../Context/CartContext'
+import  Footer from '../Footer/Footer'
 
 function ItemDetail({productos}) {
 
@@ -58,6 +59,7 @@ console.log(cartList)
 
      </div>
                 </div>
+     <Footer />
              </div>
              )
 }
