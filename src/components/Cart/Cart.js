@@ -5,11 +5,10 @@ import { CartContext } from '../../Context/CartContext'
 import { Card, Button } from 'react-bootstrap'
 import './Cart.css';
 import { Link } from 'react-router-dom';
-import SubTitulo from '../SubTitulo/SubTitulo';
+import SubTitle from '../SubTitle/SubTitle';
 import Footer from '../Footer/Footer'
 import {  getFirestore, Timestamp, collection, addDoc } from 'firebase/firestore'
 
-// doc updateDoc writeBatch
 
 
 function Cart() {
@@ -42,45 +41,44 @@ function Cart() {
         return {id, nombre, precio}
     })   
     const db = getFirestore()
-    const ordenCollection = collection(db, 'orderss')
+    const ordenCollection = collection(db, 'orders')
     addDoc(ordenCollection, orden)
     .then (resp => setIdOrder(resp.id))
     .catch (err => console.log(err))
+    .finally(() => {
+        borrarCarro()
+        setDataForm({
+            name:"", email:"", tel:""  
+        })
+    })
     
-    // const docModificar = doc(db, 'items', 'F68vSFoMcQIak1te2HxA')
-    // const docModificar2 = doc(db, 'items', 'XZsO2VQZbaQPrI0ZOz1w')
-    // orden 
-    // const batch = writeBatch(db)
-    // batch.update(docModificar, {
-    //     stock: 90
-    // })
-    // batch.update(docModificar2, {
-    //     stock: 93
-    // })
+    
 
-    // batch.commit()
-    //modificar
-    // updateDoc(docModificar, {
-    //     stock: 99
-    // } )
-    // .then(resp => console.log(resp))
-    // .catch(err => console.log(err))
-        // const ordenCollection = collection(db, 'orders');
-        //    addDoc(ordenCollection, orden)
-        //     .then (resp => setIdOrder(resp.id))
-        //     .catch(err => console.log(err))
+
+    //     const coleccionNoti = collection(db, 'items')
+    //     const querryActualizarStock = query(
+    //         coleccionNoti, where (document.id(), 'in', cartList.map(it => it.id) )
+    //     )
+    //     const batch = writeBatch(db)
+    //  getDocs(querryActualizarStock)
+    //  .then(resp => resp.docs.forEach(res => batch.update(res.ref, {
+    //     stock: resp.data().stock - cartList.find(item => item.id === resp.id).cantidad
+    //  })))
+    //  batch.commit()
     }
 
 
 if (sumaTotal() === 0) {
   return <p class="text-center">El carrito se encuentra vacio :( has click en <Button ><Link className="linkQuc" to="/" > Quilmes Urban Clothes</Link></Button> para regresar  </p>
 }
+
+
     return (
         
         <div>
 
        
- <SubTitulo />
+ <SubTitle />
 <table class=" table container">
 <thead>
                 <tr >

@@ -1,11 +1,14 @@
-.cartSvg {
-    color: white;
-    height: 2.3em;
 
-}
-
-.numberCart {
+.cartDinamic {
     color: rgb(240, 233, 233);
     text-decoration: none;
+    height: 1em;
+    margin-top: 0.1em !important;
    
 }
+
+.cartFill {
+    
+    color: white;
+}
+

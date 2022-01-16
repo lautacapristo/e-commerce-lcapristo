@@ -1,15 +1,15 @@
 import React from 'react';
-import Item from '../../Item/Item';
+import Item from '../Item/Item';
 import './ItemList.css';
 import { memo } from 'react'
 
 //memo()
 
 const ItemList = memo(
-    ({productos}) => {
+    ({products}) => {
         return (
             <>
-            { productos.map((prod) =>  <li key= {prod.id} className="col-lg-4 quitarPuntos"><Item prod = {prod} /></li>  )  }   
+            { products.map((prod) =>  <li key= {prod.id} className="col-lg-4 quitarPuntos"><Item prod = {prod} /></li>  )  }   
                
        </>
        
