@@ -1,6 +1,10 @@
 import {createContext, useState} from 'react'
 import React from 'react'
 
+
+
+
+
 export const CartContext = createContext([])
 
 function CartContextProvider({children}) {
@@ -9,7 +13,7 @@ const [cartList, setCartList] = useState([])
 
   // function agregarAlCarrito (item) {
   //   setCartList([...cartList, item])
- // }
+ // }d
 
  function borrarCarro() {
      setCartList([])
@@ -28,7 +32,14 @@ if (index > -1) {
 setCartList([...cartList, item])
 }
 
-const sumaTotal = () => {
+const alert = () => {
+    const Swal = require('sweetalert2')
+    Swal.fire('El carrito se encuentra vacio. Vuelva al inicio para agregar productos!')
+    
+}
+
+
+const total = () => {
   let count = 0
   cartList.forEach((prod) => {
       count += prod.cantidad * prod.price.replace("$", " ")
@@ -65,10 +76,11 @@ const countDinamic = () => {
         <CartContext.Provider value = {{
             cartList,
             agregarAlCarrito,
-            sumaTotal,
+            total,
             deleteItem,
              borrarCarro,
-             countDinamic
+             countDinamic,
+             alert
         }} > 
 {children}
         </CartContext.Provider>

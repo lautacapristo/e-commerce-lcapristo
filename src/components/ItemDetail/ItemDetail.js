@@ -21,7 +21,7 @@ agregarAlCarrito({...products, cantidad:cantidad})
 } 
 
 return (
-        <div key ={products.id} >
+<div key ={products.id} >
 
         <div className="container row">
                 <Card className="detail col-lg-6" >
@@ -45,7 +45,7 @@ return (
                 <h4 className="my-5 bordes"> Caracteristicas </h4>
                 <ListGroup>
                         <ListGroup.Item>{products.description}</ListGroup.Item>
-                        <ListGroup.Item> {products.marca} </ListGroup.Item>
+                        <ListGroup.Item> {products.brand} </ListGroup.Item>
                 </ListGroup>
         </div>
 
@@ -56,13 +56,12 @@ return (
         </div>
         }        
         </div>
-</div>
-</div>
+        </div>
+        </div>
 
         <Footer />
-             </div>
-             )
-}
+</div>
+)}
 
 export default ItemDetail
 

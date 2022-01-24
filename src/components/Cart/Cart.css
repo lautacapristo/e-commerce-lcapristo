@@ -1,27 +1,41 @@
-.imagenCart {
-    width: 7em !important;
-    margin-top: 1em;
+.carritoFondo {
+    background: rgb(214, 207, 207);
+    background: linear-gradient(176deg, rgb(212, 204, 204) 3%, rgb(188, 188, 189) 90%);
 }
 
-.padreTr {
-    display: flex;
-    flex-direction: row;
-}
 
- .marginCarts {
+
+.aviso {
+    padding-bottom:4.7em;
+    margin-bottom: 9.2em;
+    font-size: 2.1em;
    
-    text-align: center;
 }
 
-.marginTh {
-   
-    text-align: center;
-} 
 
 .linkQuc {
-    text-decoration: none;
-    color: white
+    color: black;
 }
+
 .linkQuc:hover {
-    color:rgb(204, 200, 195)
+    color: rgb(29, 26, 26) !important;
+}
+
+.itemscard {
+align-items: center;
+}
+
+
+.cartStyle {
+    margin-left: 11em;
+    margin-top: 1.2em;
+}
+
+.cartFoto {
+    margin-left: 21em;
+    max-width: 15.2em;
+}
+
+.buttonsCart {
+   font-weight: bold;
 }

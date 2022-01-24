@@ -9,7 +9,7 @@
          
          <Card className="cardStyle cartas">
     <Card.Img variant="top" src= {`${prod.photo}`} className="cardFoto" />
-    <Card.Body class="card-body">
+    <Card.Body className="card-body">
     <Card.Title  className="text-center c--white borderCard">{`${prod.name}`} </Card.Title>
     <Card.Text className="text-center c--white">
     {`${prod.price}`}

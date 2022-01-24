@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { Button } from 'react-bootstrap'
 import './CartWidget.css'
- import { useContext } from 'react'
+import { useContext } from 'react'
 import { CartContext } from '../../Context/CartContext'
 import { BsFillCartFill } from "react-icons/bs";
 
@@ -10,15 +9,14 @@ import { BsFillCartFill } from "react-icons/bs";
 function CartWidget() {
   const { countDinamic, cartList } = useContext(CartContext)
 
-  console.log(countDinamic)
     return (
-      <div className=" row svgCW">
+  <div className=" row svgCW">
         <Link to="/cart" className="col-lg-6 cartFill" >
-     < BsFillCartFill />
+        < BsFillCartFill />
         </Link>
-<p className="col-lg-5 cartDinamic" > {countDinamic(cartList)} </p>
+        <div className="col-lg-5 cartDinamic" > {countDinamic(cartList)} </div>
         
-        </div>
+  </div>
     )
 }
 

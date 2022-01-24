@@ -2,5 +2,7 @@
     margin-top: 1.9em !important;
     margin-bottom: 1.5em;
     font-family: 'Pangolin', cursive;
-    border-bottom: 10px groove white;
+    border-bottom: 10px groove white;  
+    background: rgb(214, 207, 207) !important;
+    background: linear-gradient(176deg, rgb(212, 204, 204) 3%, rgb(188, 188, 189) 90%);
 }
