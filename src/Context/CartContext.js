@@ -76,7 +76,6 @@ const countDinamic = () => {
 }
 
 
-
     return (
         <CartContext.Provider value = {{
             cartList,
@@ -87,6 +86,7 @@ const countDinamic = () => {
              countDinamic,
              alert,
              alertForm
+            
         }} > 
 {children}
         </CartContext.Provider>
