@@ -27,7 +27,6 @@ function Cart() {
  })
     }
 
-    console.log(dataForm);
     
     const generarOrden = (e) => {
     e.preventDefault()
@@ -117,7 +116,7 @@ if (total() === 0) {
  
              {/* <p className="text-center totalPago"> TOTAL A PAGAR: ${total()}  </p> */}
              
-            <Button variant="dark" className="mt-4 buttonsCart" > Finalizar compra </Button>
+            <Button variant="dark" className="mt-4 buttonsCart" > <Link to="/cart/Form"> Finalizar compra</Link>  </Button>
              <Button variant="light "className="buttonsCart"  onClick={() => borrarCarro(cartList)}> Vaciar carro </Button>
              
            

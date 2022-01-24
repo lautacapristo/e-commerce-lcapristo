@@ -6,6 +6,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
  import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
  import Cart from './components/Cart/Cart';
  import CartContextProvider from './Context/CartContext';
+ import Forms from  './components/Forms/Forms';
+ import Order from './components/Order/Order';
 
 
  
@@ -37,6 +39,14 @@ function App() {
           exact
             path="/detalle/:ids" element = {<ItemDetailContainer/> }
             />  
+            <Route 
+          exact
+            path="/cart/Form" element = {<Forms/> }
+            />   
+             <Route 
+          exact
+            path="/cart/Form/order" element = {<Order/> }
+            />   
             
         
          </Routes>  

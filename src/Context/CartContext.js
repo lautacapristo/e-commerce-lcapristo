@@ -38,6 +38,11 @@ const alert = () => {
     
 }
 
+const alertForm = () => {
+    const Swal = require('sweetalert2')
+    Swal.fire('Ups! Las contraseñas no coinciden')
+}
+
 
 const total = () => {
   let count = 0
@@ -80,7 +85,8 @@ const countDinamic = () => {
             deleteItem,
              borrarCarro,
              countDinamic,
-             alert
+             alert,
+             alertForm
         }} > 
 {children}
         </CartContext.Provider>

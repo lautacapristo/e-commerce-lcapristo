@@ -30,7 +30,7 @@ function Footer() {
             <div className="col-lg-3 c-white text-center">
                 <div className="my-4 contctoFooter"><BsFillMapFill className="mx-2" />Nos encontramos en Olavarria 1300</div>
                 <div className="my-4 contatoFooter"> <BsMailbox    className="mx-2" /> Nuestro mail de contacto es quilmesurbanclothes@outlook.com </div>
-                <div className="my-4 conactoFooter"> <BsWhatsapp   className="mx-2" /> Dudas particulares +01122332463 </div>
+                <div className="my-4 conactoFooter"> <BsWhatsapp   className="mx-2" /> Dudas particulares +011223463 </div>
                  </div> 
             <div className="col-lg-3 c-white derRev"> © Derechos Reservados </div>
         </div>
