@@ -3,17 +3,17 @@ import { CartContext } from '../../Context/CartContext'
 import {  getFirestore, Timestamp, collection, addDoc } from 'firebase/firestore'
 import { useContext } from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
+import './FormOrder.css';
 
 function FormOrder() {
      
    
     const [idOrder, setIdOrder] = useState('')
     const [dataForm, setDataForm] = useState({
-        name:"", email:"", password:"", password1:"" 
+        name:"", lastname:"", email:"", email2:""
     })
 
-    const { cartList, borrarCarro, total, alertForm} = useContext(CartContext)
+    const { cartList, borrarCarro, total} = useContext(CartContext)
 
     const handleChange = (e) => {
         setDataForm({
@@ -44,48 +44,57 @@ function FormOrder() {
             .finally(() => {
                 borrarCarro()
                 setDataForm({
-                    name:"", email:"", password:"", password1:""  
+                    name:"", lastname:"", email:"", email2:""
                 })
             })
             
         }
-      
-      
-        if (dataForm.password === dataForm.password1) {
 
-        
-    return (
-        <form onSubmit = {generarOrden} onChange={handleChange}>
-
+        if (dataForm.email === dataForm.email2 && 
+            dataForm.name.length & dataForm.lastname.length !== 0 &&
+            dataForm.email.length & dataForm.email2.length > 12 &&
+            cartList !== 0) {
+            
+            return ( 
+                <div>
+                    <form onSubmit = {generarOrden} onChange={handleChange}> 
         <label> Nombre </label>
-            <input className="col-lg-12 my-3" type="text" name="name" placeholder="Nombre" value={dataForm.name} />
+            <input className="col-lg-12 my-3" type="text" name="name" placeholder="Ingresar Nombre" value={dataForm.name} required />
+            <label> Apellido </label>
+            <input className="col-lg-12 my-3" type="text" name="lastname" placeholder="Ingresar Apellido" value={dataForm.lastname} required />
               <label>E-mail</label>
                 <input className="col-lg-12 my-3" type="text" name="email" placeholder="email" value={dataForm.email} />
-                <label>Contraseña</label>
-               <input className="col-lg-12 my-3" type="password" name="password" placeholder="Ingresar contraseña" value={dataForm.password} />
-               <label>Repetir contraseña</label>
-               <input className="col-lg-12 my-3" type="password" name="password1" placeholder="" value={dataForm.password1} />
-               <button className="my-3"  ><Link to="/cart/Form/order">Generar orden</Link> </button> 
-             
+                <label>Repetir E-Mail</label>
+               <input className="col-lg-12 my-3" type="text" name="email2" placeholder="Repetir mail asignado para asegurarse no tener errores" value={dataForm.email2} />
               
-               </form>
-    )
-} 
-return (
-    <form onSubmit = {generarOrden} onChange={handleChange}>
-    <label> Nombre </label>
-    <input className="col-lg-12 my-3" type="text" name="name" placeholder="Nombre" value={dataForm.name} />
-      <label>E-mail</label>
-        <input className="col-lg-12 my-3" type="text" name="email" placeholder="email" value={dataForm.email} />
-        <label>Contraseña</label>
-       <input className="col-lg-12 my-3" type="password" name="password" placeholder="Ingresar contraseña" value={dataForm.password} />
-       <label>Repetir contraseña</label>
-       <input className="col-lg-12 my-3" type="password" name="password1" placeholder="" value={dataForm.password1} />
-     
-       <button className="my-3"   onClick={() => alertForm()}  >Generar orden </button> 
-       </form>
-)
+                <button className="my-3"  >Generar orden </button>   
+                        
+              <p className=" idFormOrd"> El id de su compra es:   {idOrder.length !== 0 && idOrder }  </p>  
+              
+                </form>
+              </div>
+              )
+            
+        }
 
+    return (
+        <div>
+<form onSubmit = {generarOrden} onChange={handleChange}> 
+        <label> Nombre </label>
+            <input className="col-lg-12 my-3" type="text" name="name" placeholder="Ingresar Nombre" value={dataForm.name} required/>
+            <label> Apellido </label>
+            <input className="col-lg-12 my-3" type="text" name="lastname" placeholder="Ingresar Apellido" value={dataForm.lastname} required />
+              <label>E-mail</label>
+                <input className="col-lg-12 my-3" type="text" name="email" placeholder="email" value={dataForm.email} />
+                <label>Repetir E-Mail</label>
+               <input className="col-lg-12 my-3" type="text" name="email2" placeholder="Repetir mail asignado para asegurarse no tener errores" value={dataForm.email2} />
+              
+               <button className="my-3" disabled  >Generar orden </button>               
+               <p className=" idFormOrd" > El id de su compra es: {idOrder.length !== 0 && idOrder }  </p> 
+ 
+                </form>
+        </div>
+    )
 }
 
 export default FormOrder

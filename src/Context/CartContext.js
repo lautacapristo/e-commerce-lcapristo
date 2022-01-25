@@ -39,10 +39,10 @@ const alert = () => {
 }
 
 const alertForm = () => {
+    
     const Swal = require('sweetalert2')
-    Swal.fire('Ups! Las contraseñas no coinciden')
+    Swal.fire('Ups! Las contraseñas o E-mail no coinciden')
 }
-
 
 const total = () => {
   let count = 0

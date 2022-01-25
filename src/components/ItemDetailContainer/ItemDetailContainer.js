@@ -1,7 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState} from 'react'
-// import { task } from '../../ayuda/task'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import {  getFirestore, doc, getDoc } from 'firebase/firestore'
 import SubTitle from '../SubTitle/SubTitle'
