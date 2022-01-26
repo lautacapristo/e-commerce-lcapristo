@@ -10,13 +10,14 @@ function CartWidget() {
   const { countDinamic, cartList } = useContext(CartContext)
 
     return (
-  <div className=" row svgCW">
+
+    <div className=" row svgCW">
         <Link to="/cart" className="col-lg-6 cartFill" >
         < BsFillCartFill />
         </Link>
-        <div className="col-lg-5 cartDinamic" > {countDinamic(cartList)} </div>
-        
-  </div>
+        <p className="col-lg-5 cartDinamic" > {countDinamic(cartList)} </p>
+    </div>
+  
     )
 }
 
