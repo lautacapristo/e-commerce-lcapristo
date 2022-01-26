@@ -3,28 +3,15 @@ import Item from '../Item/Item';
 import './ItemList.css';
 import { memo } from 'react'
 
-//memo()
-
 const ItemList = memo(
     ({products}) => {
         return (
             <>
             { products.map((prod) =>  <li key= {prod.id} className="col-lg-4 quitarPuntos"><Item prod = {prod} /></li>  )  }   
-               
-       </>
-       
-           ) 
-    }
+            </>
+            ) 
+        }
 )
- 
-// function ItemList({productos}) {
-//     return (
-//      <>
-//      { productos.map((prod) =>  <li key= {prod.id} className="col-lg-4 quitarPuntos"><Item prod = {prod} /></li>  )  }   
-        
-// </>
 
-//     )
-// }
 
 export default ItemList

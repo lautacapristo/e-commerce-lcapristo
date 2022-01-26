@@ -1,23 +1,15 @@
 import {createContext, useState} from 'react'
 import React from 'react'
 
-
-
-
-
 export const CartContext = createContext([])
 
 function CartContextProvider({children}) {
 
 const [cartList, setCartList] = useState([])
 
-  // function agregarAlCarrito (item) {
-  //   setCartList([...cartList, item])
- // }d
-
- function borrarCarro() {
-     setCartList([])
- }
+function borrarCarro() {
+    setCartList([])
+}
 
 function  agregarAlCarrito(item)  {
 
@@ -38,18 +30,17 @@ const alert = () => {
     
 }
 
-const alertForm = () => {
-    
+const alertForm = () => {    
     const Swal = require('sweetalert2')
     Swal.fire('Ups! Las contraseñas o E-mail no coinciden')
 }
 
 const total = () => {
-  let count = 0
-  cartList.forEach((prod) => {
-      count += prod.cantidad * prod.price.replace("$", " ")
-  })
-  return count
+let count = 0
+cartList.forEach((prod) => {
+    count += prod.cantidad * prod.price.replace("$", " ")
+})
+return count
 };
 
 const deleteItem = (id) => {
@@ -66,15 +57,9 @@ const countDinamic = () => {
     if(count === 0) {
         count = !NaN;
     }
-    
 
-    
-
-    return count;
-    
-
+    return count;    
 }
-
 
     return (
         <CartContext.Provider value = {{
@@ -82,16 +67,15 @@ const countDinamic = () => {
             agregarAlCarrito,
             total,
             deleteItem,
-             borrarCarro,
-             countDinamic,
-             alert,
-             alertForm
+            borrarCarro,
+            countDinamic,
+            alert,
+            alertForm
             
         }} > 
 {children}
         </CartContext.Provider>
     )
 }
- 
 
 export default CartContextProvider

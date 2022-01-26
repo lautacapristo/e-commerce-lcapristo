@@ -13,7 +13,7 @@ function ItemDetailContainer() {
     const {ids} = useParams()
     
     useEffect(() => {
-        const db = getFirestore()
+        const db = getFirestore() 
         
 const objetoDb = doc(db, 'items', ids)
     getDoc(objetoDb) 

@@ -13,7 +13,7 @@ return (
         <FormOrder />                  
         <Footer/>
 
-    </div>
+    </div> 
 )}
 
 export default Forms

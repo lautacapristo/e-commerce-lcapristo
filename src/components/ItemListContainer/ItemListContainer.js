@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
 import Footer from '../Footer/Footer'
 import './ItemListContainer.css';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import SubTitle from '../SubTitle/SubTitle'
 
 
