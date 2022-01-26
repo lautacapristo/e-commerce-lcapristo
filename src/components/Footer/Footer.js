@@ -33,7 +33,7 @@ function Footer() {
                 <div className="my-4 contatoFooter"> <BsMailbox    className="mx-2" /> Nuestro mail de contacto es quilmesurbanclothes@outlook.com </div>
                 <div className="my-4 conactoFooter"> <BsWhatsapp   className="mx-2" /> Dudas particulares +011223463 </div>
             </div> 
-            <div className="col-lg-3 c-white derRev"> © Derechos Reservados </div>
+            <div className="col-lg-2 c-white derRev"> © Derechos Reservados </div>
         </div>
     )
 }
