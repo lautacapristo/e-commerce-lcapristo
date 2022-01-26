@@ -1,16 +1,11 @@
 import React from 'react'
 import './Footer.css'
-import { BsFacebook, BsInstagram, BsFillMapFill, BsMailbox, BsWhatsapp } from "react-icons/bs";
+import { BsFillMapFill, BsMailbox, BsWhatsapp } from "react-icons/bs";
 
 function Footer() {
     return (
         <div className="container-fluid row mFooter bg-grey">
-            <div className="col-lg-3 icons ">
-                <div className="c-white"> REDES SOCIALES </div>
-                <div className="my-4 c-white"> < BsFacebook /> facebook.com/QUC </div>
-                <div className="my-4 c-white"> < BsInstagram /> instagram.com/QUCcentral </div>                
-            </div> 
-
+            
             <div className="col-lg-3">
                 <div className="text-center c-white">MEDIOS DE PAGO</div>
                 <div className="container my-1">  
@@ -33,7 +28,7 @@ function Footer() {
                 <div className="my-4 contatoFooter"> <BsMailbox    className="mx-2" /> Nuestro mail de contacto es quilmesurbanclothes@outlook.com </div>
                 <div className="my-4 conactoFooter"> <BsWhatsapp   className="mx-2" /> Dudas particulares +011223463 </div>
             </div> 
-            <div className="col-lg-2 c-white derRev"> © Derechos Reservados </div>
+            <div className="col-lg-3 c-white derRev"> © Derechos Reservados </div>
         </div>
     )
 }
