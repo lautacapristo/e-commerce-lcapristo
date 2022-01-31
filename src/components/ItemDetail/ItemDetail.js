@@ -10,13 +10,10 @@ import  Footer from '../Footer/Footer'
 function ItemDetail({products}) {
 
 const [cart, setCart] = useState(true)
-
 const { agregarAlCarrito } = useContext(CartContext)
-
 const onAdd = (cantidad) => {  
 
 setCart(false);
-
 agregarAlCarrito({...products, cantidad:cantidad})
 } 
 

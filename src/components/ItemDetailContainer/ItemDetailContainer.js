@@ -8,20 +8,16 @@ import './ItemDetailContainer.css';
 
 function ItemDetailContainer() {
     
-    const [products, setProducts ] = useState({})
-    
+    const [products, setProducts ] = useState({})   
     const {ids} = useParams()
     
-    useEffect(() => {
-        const db = getFirestore() 
-        
-const objetoDb = doc(db, 'items', ids)
+useEffect(() => {
+    const db = getFirestore() 
+    const objetoDb = doc(db, 'items', ids)
     getDoc(objetoDb) 
     .then(res => setProducts({ id: res.id, ...res.data() }))
     .catch(err => console.log(err))
-        
-    }, [ids])
-    
+}, [ids])
     
     return (
         <div className="row back"> 

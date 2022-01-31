@@ -17,19 +17,18 @@ const {idCate} = useParams()
 
     useEffect(()=> {
     
-const db = getFirestore()
-    if(idCate) {
-const queryCollection = query(collection(db, 'items'), where('categoria', '==', idCate ))
+        const db = getFirestore()
+const queryCollection = idCate ?
+query(    query(collection(db,'items'), where('categoria', '==', idCate )))
+:
+query(    query(collection(db, 'items')  ))
+        
+    
         getDocs(queryCollection) 
         .then(resp => setProducts(  resp.docs.map(prod =>({ id: prod.id, ...prod.data()})  ) ))
         .catch(err => console.log(err))
 
-} else {
-const queryCollection = collection(db, 'items')
-        getDocs(queryCollection)
-        .then(resp => setProducts(  resp.docs.map( prod => ({id: prod.id, ...prod.data()}))   ))
-        .catch(err => console.log(err))
-}
+
 }, [idCate])
 
 

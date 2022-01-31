@@ -6,12 +6,10 @@ import { useState } from 'react'
 import './FormOrder.css';
 
 function FormOrder() {
-    
     const [idOrder, setIdOrder] = useState('')
     const [dataForm, setDataForm] = useState({
         name:"", lastname:"", email:"", email2:""
     })
-
     const { cartList, borrarCarro, total} = useContext(CartContext)
 
     const handleChange = (e) => {
@@ -49,8 +47,7 @@ function FormOrder() {
         }
 
         if (dataForm.email === dataForm.email2 && 
-            dataForm.name.length & dataForm.lastname.length !== 0 &&
-            dataForm.email.length & dataForm.email2.length > 12 &&
+            dataForm.email.length > 12 &&
             cartList !== 0) {
             
             return ( 

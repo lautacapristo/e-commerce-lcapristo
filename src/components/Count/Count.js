@@ -3,9 +3,7 @@ import { Button } from 'react-bootstrap'
 import { BsChevronCompactUp, BsChevronCompactDown } from "react-icons/bs";
 import './Count.css'
 function Count({stock, onAdd}) {
-
 const [ count, setCount ] = useState(1)
-
 const add=() => {    
 count !== stock && setCount(count + 1)     
 }

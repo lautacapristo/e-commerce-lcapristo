@@ -8,20 +8,15 @@ import SubTitle from '../SubTitle/SubTitle';
 import Footer from '../Footer/Footer'
 
 function Cart() {
-
 const { cartList, borrarCarro, total, deleteItem, alert} = useContext(CartContext)
     
 if (total() === 0) {
     return (
 
-    <div className="row carritoFondo">
-            
+    <div className="row carritoFondo">            
 <SubTitle />
-
 {alert()}
-
 <p className="text-center aviso col-lg-12">No hay productos en el carrito <Button variant="link" className="col-lg-12 w-75" ><Link className="linkQuc" to="/" > <em> Volver a la tienda </em> </Link></Button>  </p>
-
 <Footer /> 
 
     </div>
